@@ -1,0 +1,23 @@
+/* SEE reply capsule: a blue pill between the gray icon actions. */
+
+.capsule {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 14px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 999px;
+  background: #1a73e8;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.capsule:hover {
+  background: #1557b0;
+  color: #fff;
+}
