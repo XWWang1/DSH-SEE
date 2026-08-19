@@ -1,0 +1,297 @@
+.root {
+  width: 100%;
+  min-width: 0;
+}
+
+/* ── run bar ─────────────────────────────────────────────────────────────── */
+
+.runBar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  min-height: 30px;
+  padding: 4px 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.runTitle {
+  overflow: hidden;
+  flex: 0 1 auto;
+  min-width: 0;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 13px;
+  font-weight: 510;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.runMeta {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.statusChip {
+  display: inline-flex;
+  flex: none;
+  height: 20px;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 510;
+  line-height: 16px;
+  color: var(--dsw-alias-label-secondary);
+  white-space: nowrap;
+}
+
+/* ── stages flow ─────────────────────────────────────────────────────────── */
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stage {
+  min-width: 0;
+  border-left: 3px solid #6b7280;
+  border-radius: 10px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.stage[data-accent='log'] { border-left-color: #8b5cf6; }
+.stage[data-accent='kb'] { border-left-color: #1a73e8; }
+.stage[data-accent='code'] { border-left-color: #0e9f6e; }
+.stage[data-accent='web'] { border-left-color: #f59e0b; }
+
+.stage[data-skipped='true'] {
+  border-left-style: dashed;
+  opacity: 0.85;
+}
+
+.connector {
+  display: flex;
+  justify-content: center;
+  padding: 1px 0;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 15px;
+  line-height: 20px;
+  user-select: none;
+}
+
+.connector[data-accent='log'] { color: #8b5cf6; }
+.connector[data-accent='kb'] { color: #1a73e8; }
+.connector[data-accent='code'] { color: #0e9f6e; }
+.connector[data-accent='web'] { color: #f59e0b; }
+
+/* ── stage header ────────────────────────────────────────────────────────── */
+
+.stageHeader {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px 8px 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.stageHeader:focus-visible {
+  outline: 2px solid var(--dsw-alias-state-business-primary);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+.iconWrap {
+  display: inline-flex;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.stage[data-accent='log'] .iconWrap { background: rgba(139, 92, 246, 0.12); }
+.stage[data-accent='kb'] .iconWrap { background: rgba(26, 115, 232, 0.12); }
+.stage[data-accent='code'] .iconWrap { background: rgba(14, 159, 110, 0.12); }
+.stage[data-accent='web'] .iconWrap { background: rgba(245, 158, 11, 0.14); }
+.stage[data-accent='other'] .iconWrap { background: rgba(107, 114, 128, 0.12); }
+
+.stageTitles {
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.phaseTitle {
+  overflow: hidden;
+  color: var(--dsw-alias-label-primary, var(--dsw-alias-label-secondary));
+  font-size: 14px;
+  font-weight: 560;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.memberLabel {
+  overflow: hidden;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.skipBadge {
+  display: inline-flex;
+  flex: none;
+  height: 20px;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid rgba(217, 119, 6, 0.5);
+  border-radius: 999px;
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.1);
+  font-size: 11px;
+  font-weight: 510;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.chev {
+  flex: none;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 16px;
+  user-select: none;
+}
+
+/* ── stage body ──────────────────────────────────────────────────────────── */
+
+.stageBody {
+  min-width: 0;
+  padding: 0 12px 10px 14px;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bullet {
+  overflow: hidden;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 13px;
+  line-height: 19px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.extra {
+  margin-top: 4px;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.refs {
+  margin-top: 5px;
+  overflow: hidden;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.openFull {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 7px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--dsw-alias-state-business-primary);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 510;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.openFull:hover { text-decoration: underline; text-underline-position: from-font; }
+
+.openFull:focus-visible {
+  outline: 2px solid var(--dsw-alias-state-business-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.stageNote {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.stageNote[data-stage-note='running'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stageNote[data-stage-note='running']::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--dsw-alias-state-business-primary);
+  animation: seeWvPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes seeWvPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 560px) {
+  .stageHeader { padding: 8px 8px 6px 8px; gap: 8px; }
+  .stageBody { padding: 0 8px 8px 10px; }
+  .statusChip { display: none; }
+}
